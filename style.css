@@ -1,0 +1,366 @@
+/* ================= RESET ================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* body{
+    background: #0f0f0f;
+    color: white;
+} */
+
+#container {
+    padding: 30px 90px;
+
+}
+
+/* ================= HEADER ================= */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.location button{
+    background: #d62828;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.logo h2{
+    color: #f4a261;
+    font-size: 22px;
+}
+
+.cart i{
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+}
+/* === Popular== */
+.popular-item{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: black;
+}
+
+.popular-item h3 {
+    font-weight: bold ;
+    font-size: 30px;
+}
+/* ================= HERO ================= */
+.hero{
+    width: 100%;
+    height: 465px;
+    overflow: hidden;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide.active{
+    opacity: 2;
+}
+
+/* ================= FOOD CATEGORIES ================= */
+.categories{
+    text-align: center;
+}
+
+/* .categories h2{
+    margin-bottom: 15px;
+    color: #f4a261;
+} */
+
+.category-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    background: white;
+}
+
+.category-box span{
+    padding: 25px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-box span:hover{
+    background: #f4a261;
+
+}
+
+.category-box{
+     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ================= FEATURED CARDS ================= */
+.featured{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 30px 20px;
+    
+}
+
+.featured .card{
+    height: 100%;
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.featured .popular-img {
+    height: 100%;
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.featured .card:hover{
+    transform: scale(1.1);
+}
+
+.card .name{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card .price{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.card del{
+    color: red;
+    margin-right: 5px;
+}
+
+.card span{
+    color: black;
+    font-weight: bold;
+}
+
+.featured .card .name{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    z-index: 2;
+}
+
+.featured .card .name span{
+    background:#f4a261;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+    
+}
+/* ================= BANNER ================= */
+.banner{
+    overflow: hidden;
+    padding: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ================= PRODUCT SECTION ================= */
+
+.products{
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.product-card:hover{
+    transform: translateY(-8px);
+}
+
+.product-card img{
+    width: 100%;
+    height: 280px;
+    padding: 3px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.product-card h3{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.product-card p{
+    color: #f4a261;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-card button{
+    margin-bottom: 20px;
+    padding: 12px 22px;
+    border: none;
+    background: #d62828;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover{
+    background: #f4a261;
+    color: black;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background: #111;
+    color: white;
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px solid #222;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    padding: 0 8%;
+}
+
+.footer-box h2{
+    color: #f4a261;
+    margin-bottom: 15px;
+}
+
+.footer-box h3{
+    margin-bottom: 15px;
+    color: #f4a261;
+}
+
+.footer-box p{
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.footer-box a{
+    display: block;
+    text-decoration: none;
+    color: #ccc;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-box a:hover{
+    color: #d62828;
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons i{
+    width: 45px;
+    height: 45px;
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover{
+    background: #d62828;
+}
+
+.footer-bottom{
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding: 20px;
+    color: #aaa;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:576px){
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons{
+        justify-content: center;
+    }
+}
+
+
+
+
